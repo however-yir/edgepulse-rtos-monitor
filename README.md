@@ -240,3 +240,19 @@ make flash
 - 本仓库新增的文档与自定义整合代码：见仓库根目录 `LICENSE`
 
 详细清单见：`THIRD_PARTY_NOTICES.md`
+
+## Baseline Maintenance
+
+### Environment
+
+- Put runtime credentials in environment variables.
+- Use `.env.example` as the configuration template.
+
+### CI
+
+- `baseline-ci.yml` provides a unified pipeline with `lint + build + test + secret scan`.
+
+### Repo Hygiene
+
+- Keep generated files (`dist/`, `build/`, `__pycache__/`, `.idea/`, `.DS_Store`) out of version control.
+
