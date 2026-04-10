@@ -83,16 +83,16 @@ For more details about this application, refer to UM1713 "STM32Cube interfacing 
 
 Connectivity, LwIP, Ethernet, HTTP Server, Netconn, TCP/IP, FreeRTOS, DHCP	
 
-@Note If the user code size exceeds the DTCM-RAM size or starts from internal cacheable memories (SRAM1 and SRAM2),that is shared between several processors,
-      then it is highly recommended to enable the CPU cache and maintain its coherence at application level.
-      The address and the size of cacheable buffers (shared between CPU and other masters)  must be properly updated to be aligned to cache line size (32 bytes).
+@NoteIf the user code size exceeds the DTCM-RAM size or starts from internal cacheable memories (SRAM1 and SRAM2),that is shared between several processors,
+ then it is highly recommended to enable the CPU cache and maintain its coherence at application level.
+The address and the size of cacheable buffers (shared between CPU and other masters)  must be properly updated to be aligned to cache line size (32 bytes).
 
 @Note It is recommended to enable the cache and maintain its coherence, but depending on the use case
-      It is also possible to configure the MPU as "Write through", to guarantee the write access coherence.
-      In that case, the MPU must be configured as Cacheable/Bufferable/Not Shareable.
-      Even though the user must manage the cache coherence for read accesses.
-      Please refer to the AN4838 “Managing memory protection unit (MPU) in STM32 MCUs”
-      Please refer to the AN4839 “Level 1 cache on STM32F7 Series”
+ It is also possible to configure the MPU as "Write through", to guarantee the write access coherence.
+In that case, the MPU must be configured as Cacheable/Bufferable/Not Shareable.
+Even though the user must manage the cache coherence for read accesses.
+Please refer to the AN4838 Managing memory protection unit (MPU) in STM32 MCUs
+Please refer to the AN4839 Level 1 cache on STM32F7 Series
 
 @par Directory contents
 
@@ -141,3 +141,15 @@ In order to make the program work, you must do the following :
 
  * <h3><center>&copy; COPYRIGHT STMicroelectronics</center></h3>
  */
+
+Audit Baseline Notes
+
+Requirements
+- Environment requirements are defined by this module and parent project documentation.
+- Configure credentials via environment variables before startup.
+- Use .env.example (or equivalent sample config) for local setup.
+
+Run
+- Install dependencies for this module before execution.
+- Use the standard project command to build and run for this repository.
+
